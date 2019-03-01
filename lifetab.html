@@ -2,21 +2,38 @@
 <html>
   <head>
     <title>Test</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src *;" />
 
     <!-- MaterializeCSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link rel="stylesheet" href="lifetab.css" />
   </head>
   <body>
-    <h1>
-      <form>Hello <input type="text" name="name" /></form>
-    </h1>
+    <!-- Hello Area -->
+    <div class="container" id="hello_area">
+      <h1 class="center-align">hi maxine.</h1>
+    </div>
 
-    <div id="quote_area">
-      <h1 id="quote_text"></h1>
-      <h3 id="quote_author"></h3>
+    <!-- Quote Area -->
+    <div class="container" id="quote_area">
+      <div class="col s12 m6">
+        <div class="card blue-grey darken-1 hoverable">
+          <div class="card-content white-text">
+            <h5 id="quote_text"></h5>
+            <p id="quote_author"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Todo List Area -->
+    <div class="container" id="todo_area">
+      <div class="card">
+        <h3 class="center-align">- todo -</h3>
+      </div>
     </div>
 
     <!-- JavaScript Files -->
