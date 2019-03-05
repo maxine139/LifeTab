@@ -2,7 +2,6 @@ function getQuote() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      // Typical action to be performed when the document is ready:
       const response = JSON.parse(xhttp.response);
       const response_quote = response["contents"]["quotes"][0]["quote"];
       const response_author = response["contents"]["quotes"][0]["author"];
