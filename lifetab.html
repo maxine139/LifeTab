@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="lifetab.css" />
   </head>
   <body>
@@ -30,15 +34,33 @@
     </div>
 
     <!-- Todo List Area -->
-    <div class="container" id="todo_area">
-      <div class="card">
-        <h3 class="center-align">- todo -</h3>
+    <div class="container" id="todo-area">
+      <div class="card hoverable" id="todo-card">
+        <h4 class="center-align">- to do -</h4>
+
+        <div id="todo-list-content"></div>
+        <form id="todo-list-add-form">
+          <div class="todo-list-row green-on-hover">
+            <i class="material-icons" id="todo-list-add-icon">
+              add
+            </i>
+            <input
+              type="text"
+              class="todo-list-item"
+              id="todo-list-add-text"
+              placeholder="add a task"
+              autocomplete="off"
+            />
+          </div>
+        </form>
       </div>
     </div>
 
     <!-- JavaScript Files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="quote.js"></script>
     <script src="index.js"></script>
+    <script src="todo.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="materialize.min.js"></script>
   </body>
 </html>
