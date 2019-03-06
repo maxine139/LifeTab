@@ -1,13 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Test</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src *;" />
+
+    <!-- MaterializeCSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="lifetab.css" />
   </head>
   <body>
-    <h1>
-        <form>
-            Hello <input type = "text" name = "name">
+    <!-- Hello Area -->
+    <div class="container" id="hello_area">
+      <h1 class="center-align">hi maxine.</h1>
+    </div>
+
+    <!-- Quote Area -->
+    <div class="container" id="quote_area">
+      <div class="col s12 m6">
+        <div class="card blue-grey darken-1 hoverable">
+          <div class="card-content white-text">
+            <h5 id="quote_text"></h5>
+            <p id="quote_author"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Todo List Area -->
+    <div class="container" id="todo-area">
+      <div class="card hoverable" id="todo-card">
+        <h4 class="center-align">- to do -</h4>
+
+        <div id="todo-list-content"></div>
+        <form id="todo-list-add-form">
+          <div class="todo-list-row green-on-hover">
+            <i class="material-icons" id="todo-list-add-icon">
+              add
+            </i>
+            <input
+              type="text"
+              class="todo-list-item"
+              id="todo-list-add-text"
+              placeholder="add a task"
+              autocomplete="off"
+            />
+          </div>
         </form>
-    </h1>
+      </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="quote.js"></script>
+    <script src="index.js"></script>
+    <script src="todo.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="materialize.min.js"></script>
   </body>
 </html>
