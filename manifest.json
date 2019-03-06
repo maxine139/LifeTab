@@ -1,16 +1,14 @@
 {
-  "name": "LifeTab",
-  "version": "1.0",
-  "manifest_version": 2,
+    "name": "LifeTab",
+    "version": "1.0",
+    "manifest_version": 2,
 
-  "permissions": ["storage"],
+    "chrome_url_overrides" : {
+      "newtab": "lifetab.html"
+    },
 
-  "chrome_url_overrides": {
-    "newtab": "lifetab.html"
-  },
-
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  }
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
 }
