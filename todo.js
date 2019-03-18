@@ -104,8 +104,10 @@ function initializeAddTaskComponent() {
     event.preventDefault();
     const textElement = document.getElementById("todo-list-add-text");
     const todoAddText = textElement.value;
-    textElement.value = "";
-    createTask({ text: todoAddText, completed: false });
+    if (todoAddText !== "") {
+      textElement.value = "";
+      createTask({ text: todoAddText, completed: false });
+    }
   };
   const todoAddIcon = document.getElementById("todo-list-add-icon");
   todoAddIcon.onclick = () => {
