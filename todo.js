@@ -97,23 +97,24 @@ function createTask(taskObject) {
   saveTodoTasks();
 }
 
+function createNewTaskFromInput() {
+  const textElement = document.getElementById("todo-list-add-text");
+  const todoAddText = textElement.value;
+  if (todoAddText !== "") {
+    textElement.value = "";
+    createTask({ text: todoAddText, completed: false });
+  }
+}
+
 function initializeAddTaskComponent() {
-  /* Add Task Listeners */
+  /* AddTask Listeners */
   const todoAddForm = document.getElementById("todo-list-add-form");
   todoAddForm.onsubmit = event => {
     event.preventDefault();
-    const textElement = document.getElementById("todo-list-add-text");
-    const todoAddText = textElement.value;
-    textElement.value = "";
-    createTask({ text: todoAddText, completed: false });
+    createNewTaskFromInput();
   };
   const todoAddIcon = document.getElementById("todo-list-add-icon");
-  todoAddIcon.onclick = () => {
-    const textElement = document.getElementById("todo-list-add-text");
-    const todoAddText = textElement.value;
-    textElement.value = "";
-    createTask({ text: todoAddText, completed: false });
-  };
+  todoAddIcon.onclick = () => createNewTaskFromInput();
 }
 
 function fetchTodoTasks() {
