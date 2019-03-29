@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 45vw;
+  max-width: 40vw;
 }
 
 #todo-card {
@@ -54,7 +54,7 @@ body {
 #todo-list-add-text {
   cursor: text;
   margin-top: 3rem;
-  max-width: 90%;
+  max-width: 80%;
 }
 
 #todo-list-add-form {
