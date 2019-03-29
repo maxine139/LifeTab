@@ -23,7 +23,7 @@ function dataIsStale(data) {
   const currentDateTime = new Date();
   const timeDifferenceInMilliseconds = currentDateTime - dataDateTime;
   const timeDifferenceInHours = timeDifferenceInMilliseconds / 1000 / 60 / 60;
-  return timeDifferenceInHours >= 3;
+  return timeDifferenceInHours >= 1;
 }
 
 function setWeatherToDOM(data) {
