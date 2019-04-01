@@ -24,15 +24,48 @@
     <!-- testing weather!! -->
     <div class = "container" id="weather_area">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1 hoverable">
-              <div class="card-content white-text">
+            <div class="card darken-1 hoverable">
+              <div class="card-content">
                   <p id="weather_location"></p>
                   <h5 id="current_temp"></h5>
+                  <h5 id="date"></h5>
+                  <img id="weather-icon"></img>
                   <button type="button" id="forecast-button">Forecast</button>
                   <div id = "my_modal" class="modal">
                       <div class="modal-content">
                           <span class="close">&times;</span>
-                          <h1> i modallll </h1>
+                          <div class="row">
+                              <div class="column">
+                                  <div class="card blue-grey darken-1 hoverable">
+                                      <div class="card-content white-text">
+                                          <h5 id=tmrw_1></h5>
+                                          <img id="weather_1_icon"></img>
+                                          <h5 id="day_1_min"></h5>
+                                          <h5 id="day_1_max"></h5>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="column">
+                                  <div class="card blue-grey darken-1 hoverable">
+                                      <div class="card-content white-text">
+                                          <h5 id=tmrw_2></h5>
+                                          <img id="weather_2_icon"></img>
+                                          <h5 id="day_2_min"></h5>
+                                          <h5 id="day_2_max"></h5>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="column">
+                                  <div class="card blue-grey darken-1 hoverable">
+                                      <div class="card-content white-text">
+                                          <h5 id=tmrw_3></h5>
+                                          <img id="weather_3_icon"></img>
+                                          <h5 id="day_3_min"></h5>
+                                          <h5 id="day_3_max"></h5>
+                                      </div>
+                                  </div>
+                              </div>
+                        </div>
                       </div>
                   </div>
               </div>
