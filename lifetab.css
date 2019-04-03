@@ -77,4 +77,29 @@ body {
   position: fixed;
   top: 5px;
   left: 15px;
+  font-size: 1.1rem;
+  font-weight: 200;
+  cursor: default;
+}
+
+#weather_area p {
+  margin: 0.1rem;
+}
+
+/* #current_time {
+  font-weight: 200;
+}
+
+#current_day {
+  font-weight: 200; 
+} */
+
+#weather_location {
+  font-weight: 400;
+}
+
+#current_temp {
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 2.5rem;
 }

@@ -23,14 +23,17 @@ function getWeather() {
     }
   });
 
+  setInterval(loadDateTime, 1000);
+}
+
+function loadDateTime() {
   // Set datetime to DOM
-  // const
-  const currentDateTime = new Date();
-  const currentDate = currentDateTime.toLocaleString();
-  const currentDay = dayStrings[currentDateTime.getDay()];
-  document.getElementById(
-    "current_datetime"
-  ).innerHTML = `${currentDay}, ${currentDate}`;
+  const currentDate = new Date();
+  const currentDateTime = currentDate.toLocaleString();
+  const currentDay = dayStrings[currentDate.getDay()];
+
+  document.getElementById("current_time").innerHTML = currentDateTime;
+  document.getElementById("current_day").innerHTML = currentDay;
 }
 
 function dataIsStale(data) {
