@@ -54,13 +54,21 @@ body {
   background-size: cover;
 }
 
+.container {
+  max-width: 40vw;
+}
+
+.green-on-hover:hover {
+  color: rgb(75, 214, 172);
+}
+
+/*
+ *  TO-DO LIST SECTION
+ */
+
 #todo-list-content {
   max-height: 40vh;
   overflow-y: auto;
-}
-
-.container {
-  max-width: 45vw;
 }
 
 #todo-card {
@@ -72,10 +80,6 @@ body {
   vertical-align: text-bottom;
   padding-left: 1rem !important;
   width: 85% !important;
-}
-
-.todo-list-row {
-  /* padding: 0 2rem 0 2rem !important; */
 }
 
 .todo-list-row:hover {
@@ -104,17 +108,40 @@ body {
 #todo-list-add-text {
   cursor: text;
   margin-top: 3rem;
-  max-width: 90%;
+  max-width: 80%;
 }
 
 #todo-list-add-form {
   margin-left: 1.5rem;
 }
 
-.green-on-hover:hover {
-  color: rgb(75, 214, 172);
-}
-
 #todo-list-content {
   padding: 1rem;
+}
+
+/*
+ *  WEATHER SECTION
+ */
+
+#weather_area {
+  position: fixed;
+  top: 5px;
+  left: 15px;
+  font-size: 1.1rem;
+  font-weight: 200;
+  cursor: default;
+}
+
+#weather_area p {
+  margin: 0.1rem;
+}
+
+#weather_location {
+  font-weight: 400;
+}
+
+#current_temp {
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 2.5rem;
 }
