@@ -72,3 +72,9 @@ body {
 /*
  *  WEATHER SECTION
  */
+
+#weather_area {
+  position: fixed;
+  top: 5px;
+  left: 15px;
+}

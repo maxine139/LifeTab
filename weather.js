@@ -1,3 +1,13 @@
+const dayStrings = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+
 function getWeather() {
   /**
    * Grab weather from storage. If exists and not stale (less than 1 hour old)
@@ -12,6 +22,15 @@ function getWeather() {
       setWeatherToDOM(data);
     }
   });
+
+  // Set datetime to DOM
+  // const
+  const currentDateTime = new Date();
+  const currentDate = currentDateTime.toLocaleString();
+  const currentDay = dayStrings[currentDateTime.getDay()];
+  document.getElementById(
+    "current_datetime"
+  ).innerHTML = `${currentDay}, ${currentDate}`;
 }
 
 function dataIsStale(data) {
@@ -31,7 +50,8 @@ function setWeatherToDOM(data) {
    * Update DOM to reflect data that was passed in.
    */
   document.getElementById("weather_location").innerHTML = data["cityName"];
-  document.getElementById("current_temp").innerHTML = data["currentTemp"];
+  document.getElementById("current_temp").innerHTML =
+    data["currentTemp"] + "&deg; F";
 }
 
 function fetchWeather() {
@@ -48,7 +68,7 @@ function fetchWeather() {
     if (request.status >= 200 && request.status < 400) {
       // Parse data
       const cityName = data.name;
-      const currentTemp = data.main.temp;
+      const currentTemp = data.main.temp.toFixed(0);
       const currentDateTime = new Date();
 
       // Store data in local storage
