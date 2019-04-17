@@ -169,3 +169,16 @@ body {
 #settings-icon:hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
+
+#settings-dropdown {
+  width: 25vw;
+  padding: 1rem;
+}
+
+#settings-buttons {
+  margin-top: 1rem;
+}
+
+.settings-btn {
+  color: teal;
+}
