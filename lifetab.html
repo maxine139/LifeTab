@@ -16,10 +16,47 @@
     <link rel="stylesheet" href="lifetab.css" />
   </head>
   <body>
+    <!-- Settings Area -->
+    <div id="settings_area">
+      <i
+        class="material-icons dropdown-trigger"
+        data-target="settings-dropdown"
+        id="settings-icon"
+      >
+        settings
+      </i>
+
+      <div id="settings-dropdown" class="dropdown-content">
+        <div class="container ">
+          <form autocomplete="off" id="settings-form">
+            <div class="row">
+              <div class="input-field col">
+                <input type="text" id="name_input" />
+                <label for="name_input">Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col">
+                <input type="text" id="location_input" />
+                <label for="location_input">Location</label>
+              </div>
+            </div>
+            <div id="settings-buttons">
+              <button class="btn settings-btn" id="settings-save-btn">
+                Save
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End Settings -->
+
     <!-- Hello Area -->
     <div class="container" id="hello_area">
-      <h1 class="center-align">hi maxine.</h1>
+      <h1 id="hello_text" class="center-align">hi maxine.</h1>
     </div>
+    <!-- End Hello Area -->
 
     <!-- testing weather!! -->
     <div class="container" id="weather_area">
@@ -27,48 +64,48 @@
       <p id="current_day"></p>
       <p id="weather_location"></p>
       <p id="current_temp"></p>
-      <img id="weather-icon"></img>
+      <img id="weather-icon" />
       <button type="button" id="forecast-button">Forecast</button>
     </div>
 
-    <div id = "my_modal" class="modal">
-        <div class="w3-modal-content">
-            <div class="w3-container">
-            <span class="close">&times;</span>
-            <div class="row">
-                <div class="column">
-                    <div class="card blue-grey darken-1 hoverable">
-                        <div class="card-content white-text">
-                            <h5 id=tmrw_1></h5>
-                            <img id="weather_1_icon"></img>
-                            <h5 id="day_1_min"></h5>
-                            <h5 id="day_1_max"></h5>
-                        </div>
-                    </div>
+    <div id="my_modal" class="modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span class="close">&times;</span>
+          <div class="row">
+            <div class="column">
+              <div class="card blue-grey darken-1 hoverable">
+                <div class="card-content white-text">
+                  <h5 id="tmrw_1"></h5>
+                  <img id="weather_1_icon" />
+                  <h5 id="day_1_min"></h5>
+                  <h5 id="day_1_max"></h5>
                 </div>
-                <div class="column">
-                    <div class="card blue-grey darken-1 hoverable">
-                        <div class="card-content white-text">
-                            <h5 id=tmrw_2></h5>
-                            <img id="weather_2_icon"></img>
-                            <h5 id="day_2_min"></h5>
-                            <h5 id="day_2_max"></h5>
-                        </div>
-                    </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card blue-grey darken-1 hoverable">
+                <div class="card-content white-text">
+                  <h5 id="tmrw_2"></h5>
+                  <img id="weather_2_icon" />
+                  <h5 id="day_2_min"></h5>
+                  <h5 id="day_2_max"></h5>
                 </div>
-                <div class="column">
-                    <div class="card blue-grey darken-1 hoverable">
-                        <div class="card-content white-text">
-                            <h5 id=tmrw_3></h5>
-                            <img id="weather_3_icon"></img>
-                            <h5 id="day_3_min"></h5>
-                            <h5 id="day_3_max"></h5>
-                        </div>
-                    </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card blue-grey darken-1 hoverable">
+                <div class="card-content white-text">
+                  <h5 id="tmrw_3"></h5>
+                  <img id="weather_3_icon" />
+                  <h5 id="day_3_min"></h5>
+                  <h5 id="day_3_max"></h5>
                 </div>
+              </div>
+            </div>
           </div>
-      </div>
         </div>
+      </div>
     </div>
 
     <!-- Quote Area -->
@@ -107,11 +144,13 @@
     </div>
 
     <!-- JavaScript Files -->
-    <script src="weather.js"></script>
-    <script src="quote.js"></script>
-    <script src="index.js"></script>
-    <script src="todo.js"></script>
     <script src="jquery.min.js"></script>
     <script src="materialize.min.js"></script>
+    <script src="weather.js"></script>
+    <script src="quote.js"></script>
+    <script src="todo.js"></script>
+    <script src="hello.js"></script>
+    <script src="settings.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
