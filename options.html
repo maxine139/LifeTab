@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Settings</title>
-    </head>
-    <body onload="loadSetUp()">
-        <form autocomplete="on">
-            Name:<br>
-            <input type="text" name="name"><br>
-            Location:<br>
-            <input type="text" name="location">
-        </form>
-        <div id="status"></div>
-        <button id="save">Save</button>
-        <button id="cancel">Cancel</button>
-        <script src="options.js"></script>
-    </body>
+  <head>
+    <title>Settings</title>
+    <!-- MaterializeCSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
+  <body>
+    <div class="container ">
+      <form autocomplete="off" id="settings-form">
+        <div class="row">
+          <div class="input-field col">
+            <input type="text" id="name_input" />
+            <label for="name_input">Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col">
+            <input type="text" id="location_input" />
+            <label for="location_input">Location</label>
+          </div>
+        </div>
+        <div class="row" id="settings-buttons">
+          <button class="btn-flat settings-btn" id="settings-save-btn">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="materialize.min.js"></script>
+    <script src="settings.js"></script>
+  </body>
 </html>
