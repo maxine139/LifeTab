@@ -5,5 +5,3 @@ const updateName = () => {
     helloTextElem.innerHTML = `hi ${result.settings.name}.`;
   });
 };
-
-helloTextElem.onclick = () => updateName();
