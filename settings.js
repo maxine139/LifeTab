@@ -15,7 +15,10 @@ const saveAndUpdateValues = () => {
     {
       settings: { name: nameValue, location: locationValue }
     },
-    updateName
+    () => {
+      updateName();
+      updateWeather();
+    }
   );
 };
 
