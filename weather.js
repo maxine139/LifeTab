@@ -147,12 +147,12 @@ function fetchForecast() {
         tmrw2.setDate(today.getDate() + 2);
         tmrw3.setDate(today.getDate() + 3);
 
-        day1min = data.list[2].main.temp;
-        day1max = data.list[7].main.temp;
-        day2min = data.list[10].main.temp;
-        day2max = data.list[15].main.temp;
-        day3min = data.list[18].main.temp;
-        day3max = data.list[23].main.temp;
+        day1min = data.list[2].main.temp.toFixed(0);;
+        day1max = data.list[7].main.temp.toFixed(0);;
+        day2min = data.list[10].main.temp.toFixed(0);;
+        day2max = data.list[15].main.temp.toFixed(0);;
+        day3min = data.list[18].main.temp.toFixed(0);;
+        day3max = data.list[23].main.temp.toFixed(0);;
       } else {
         console.log("error");
       }
